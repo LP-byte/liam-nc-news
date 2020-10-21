@@ -1,38 +1,273 @@
-.App {
+*{
+    background-color: #ebebeb;
+}
+@media(max-width: 4000px) and (min-width: 1470px) {
+
+    .App-header{
+
+    background-color: rgb(117, 233, 40);
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 7vh;
+    background-color: #681d1d;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  }
+  li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: rgb(206, 184, 184);
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      background-color: #111111;
+    }
+.headerlogo {
+    max-width: 200px;
+    position: left;
+    display: flex;
+    justify-content: space-around;
+    background-color: #681d1d;
+}
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    }
+
+    
+    .homeIcon{
+        max-width: 40px;
+        background-color: #681d1d;
+        
+    }
+    
+    .articlesIcon{
+        max-width: 40px;
+        background-color: #681d1d;
+        
+    }
+  .topicsIcon{
+    max-width: 40px;
+    background-color: #681d1d;
+
+}
+
+.articleFeedCards {
+  margin: 0 auto;
+  min-width: 900px;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(1, 9fr);
+  grid-gap: 25px;
+  background-color: #b6b6b6;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  
+}
+
+.articleFeedCards > li{
+  background-color: white;
+  min-width: 500px;
+  max-width: 700px;
+
+  border-radius: 75px;
   text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.articleFeedHead{
+  
+font-size: 10px;
+display: inline;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media(max-width: 1470px) and (min-width: 500px) {
 
-.App-link {
-  color: #61dafb;
-}
+    .App-header{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+        background-color: rgb(117, 233, 40);
+    
+    }
+    
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 7vh;
+        background-color: #681d1d;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .headerlogo {
+        max-width: 200px;
+        position: left;
+        display: flex;
+        justify-content: space-around;
+        background-color: #681d1d;
+    }
+    
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+        }
+        li {
+            float: left;
+          }
+          
+          li a {
+            display: block;
+            color: rgb(206, 184, 184);
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+          }
+          
+          li a:hover {
+            background-color: #111111;
+          }
+        
+        
+        .homeIcon{
+            max-width: 40px;
+            background-color: #681d1d;
+            
+        }
+        
+        .articlesIcon{
+            max-width: 40px;
+            background-color: #681d1d;
+            
+        }
+      .topicsIcon{
+        max-width: 40px;
+        background-color: #681d1d;
+    
+    }
+    .articleFeedCards {
+      margin: 0 auto;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 25px;
+      
+    }
+    }
+
+
+    @media(max-width: 500px){
+        .App-header{
+
+            background-color: rgb(117, 233, 40);
+        
+        }
+        
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 7vh;
+            background-color: #681d1d;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .headerlogo {
+            max-width: 200px;
+            position: left;
+            display: flex;
+            justify-content: space-around;
+            background-color: #681d1d;       
+        
+        }
+        
+          .headerList{
+              list-style-type: none;
+              overflow: hidden;
+              margin: 0;
+              padding: 0;
+              background-color: #681d1d;
+              display: inline;
+            }
+            
+            
+            .homeIcon{
+                max-width: 40px;
+                background-color: #681d1d;
+                
+            }
+            
+            .articlesIcon{
+                max-width: 40px;
+                background-color: #681d1d;
+                
+            }
+          .topicsIcon{
+            max-width: 40px;
+            background-color: #681d1d;
+        
+        }
+        .articleFeedCards {
+          margin: 0 auto;
+          max-width: 1000px;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 25px;
+          
+        }
+        .articleFeedCards > li{
+          background-color: gray;
+          opacity: 50%;
+          border-radius: 75px;
+          text-align: center;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          
+        }
+        ul{
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333333;
+          }
+          li {
+              float: left;
+            }
+            
+            li a {
+              display: block;
+              color: rgb(206, 184, 184);
+              text-align: center;
+              padding: 16px;
+              text-decoration: none;
+            }
+            
+            li a:hover {
+              background-color: #111111;
+            }
+    }
+
