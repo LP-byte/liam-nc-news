@@ -12,13 +12,15 @@
         padding: 0;
         overflow: hidden;
         background-color: #ffffff}
-        .navlist > li {
+        .navlist li {
         float: left}
         .navlist > li a {
+            padding: 5px;
         display: block;
         background-color: white}
         .navlist > li a:hover {
         background-color: lightgray;
+        border-radius: 7px;
     }
 
     .headerlogo {
