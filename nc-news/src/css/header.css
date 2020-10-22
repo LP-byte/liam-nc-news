@@ -1,0 +1,130 @@
+@media(max-width: 4000px) and (min-width: 1470px) {
+
+    nav {
+        min-height: 7vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #ffffff}
+        .navlist {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ffffff}
+        .navlist > li {
+        float: left}
+        .navlist > li a {
+        display: block;
+        background-color: white}
+        .navlist > li a:hover {
+        background-color: lightgray;
+    }
+
+    .headerlogo {
+        max-width: 100px;
+        position: left;
+        display: flex;
+        justify-content: space-around;
+        background-color: #ffffff;
+    }
+
+    .homeIcon{
+            max-width: 40px;
+            background-color: transparent}
+    .articlesIcon{
+            max-width: 40px;
+            background-color: transparent}
+    .topicsIcon{
+            max-width: 40px;
+            background-color: transparent}
+
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 1470px) and (min-width: 500px) {
+
+    nav {
+        min-height: 7vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #ffffff}
+        .navlist {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ffffff}
+        .navlist > li {
+        float: left}
+        .navlist > li a {
+        display: block;
+        background-color: white}
+        .navlist > li a:hover {
+        background-color: lightgray;
+    }
+
+    .headerlogo {
+        max-width: 100px;
+        position: left;
+        display: flex;
+        justify-content: space-around;
+        background-color: #ffffff;
+    }
+
+    .homeIcon{
+            max-width: 40px;
+            background-color: transparent}
+    .articlesIcon{
+            max-width: 40px;
+            background-color: transparent}
+    .topicsIcon{
+            max-width: 40px;
+            background-color: transparent}
+
+}
+
+
+
+
+
+
+
+@media(max-width: 500px){
+
+    nav {
+        min-height: 7vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #ffffff}
+        .navlist {
+        display: none;}
+
+    
+
+    .headerlogo {
+        max-width: 100px;
+        position: left;
+        display: flex;
+        justify-content: space-around;
+        background-color: #ffffff;
+    }
+
+    .homeIcon{
+            display: none;}
+    .articlesIcon{
+            display: none;}
+    .topicsIcon{
+            display: none;}
+
+
+}

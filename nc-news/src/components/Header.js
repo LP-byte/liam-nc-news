@@ -1,31 +1,33 @@
 import React from "react";
-import largeHeaderLogo from '../img/emptyIMG.png'
+import logoPlaceholder from '../img/emptyIMG.png'
+import largeHeaderLogo from '../img/headerLogopng.png'
 import { Link } from "@reach/router";
+import '../css/header.css'
 
 
 
 const Header = (props) => {
   return (
-    <header className="App-header">
+    <header>
 
       <nav>
         <Link to={`/`}>
         <img className='headerlogo' src={largeHeaderLogo} alt='' />
         </Link>
-        <ul >
+        <ul className = 'navlist'>
           <li>
           <Link to={`/`}>
-        <img className='homeIcon' src={largeHeaderLogo} alt='' />
+        <img className='homeIcon' src={logoPlaceholder} alt='' />
         </Link>
           </li>
           <li>
           <Link to={`/`}>
-        <img className='articlesIcon' src={largeHeaderLogo} alt='' />
+        <img className='articlesIcon' src={logoPlaceholder} alt='' />
         </Link>
           </li>
                     <li>
           <Link to={`/`}>
-        <img className='articlesIcon' src={largeHeaderLogo} alt='' />
+        <img className='articlesIcon' src={logoPlaceholder} alt='' />
         </Link>
           </li>
         </ul>

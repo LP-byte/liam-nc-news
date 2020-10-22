@@ -22,10 +22,6 @@ class ArticleFeedList extends React.Component{
       
 }
 
-    state = {
-        user: [],
-        isLoading: true
-    }
 
 
 
@@ -39,15 +35,7 @@ componentDidMount() {
         isLoading: false,
       });
     });
-    axios
-    .get(`https://nc-news-server-liam.herokuapp.com/api/users/${this.props.username}`)
 
-    .then((res) => {
-      this.setState({
-        user: res.data.user,
-        isLoading: false,
-      });
-    });
 }
 
 

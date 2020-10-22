@@ -3,34 +3,10 @@
 }
 @media(max-width: 4000px) and (min-width: 1470px) {
 
-    .App-header{
 
-    background-color: rgb(117, 233, 40);
-
-}
-
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 7vh;
-    background-color: #681d1d;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
-  }
-  li {
-      float: left;
-    }
     
     li a {
-      display: block;
-      color: rgb(206, 184, 184);
+      color: red;
       text-align: center;
       padding: 16px;
       text-decoration: none;
@@ -39,12 +15,12 @@ ul{
     li a:hover {
       background-color: #111111;
     }
-.headerlogo {
-    max-width: 200px;
+.headerogo {
+    max-width: 100px;
     position: left;
     display: flex;
     justify-content: space-around;
-    background-color: #681d1d;
+    background-color: #ffffff;
 }
 
   ul{
