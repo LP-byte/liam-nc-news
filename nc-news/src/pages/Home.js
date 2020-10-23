@@ -40,7 +40,6 @@ componentDidMount() {
 
 render () {
     
-    console.log(this.state.user)
     if(this.state.isLoading) 
     return <b>article data loading...</b>
     
@@ -80,7 +79,6 @@ render () {
            const secondsPast = (timeStampNow - articleUnix);
            
            let articlePostTime = '';
-           console.log(article.created_at)
 
 
            if (secondsPast < 61){
@@ -104,11 +102,11 @@ render () {
                     <StyledLink to={`/${article.article_id}`}>
                         <div className = 'articleFeedHead'>
                         <h1 className = 'articleFeedAuthor'>Author: {article.author}</h1>
-                        <h1 className = 'articleFeedDateStamp'>{articlePostTime}</h1>
+                        <h2 className = 'articleFeedDateStamp'>{articlePostTime}</h2>
                         </div>
-                        <h1 className = 'articleFeedName'>{article.title}</h1>
-                        <h1 className = 'articleFeedBody'>{article.body.slice(0,60)}...</h1>
-                        <h1 className = 'articleFeedLikes'>Likes: {article.votes}</h1>
+                        <h3 className = 'articleFeedName'>{article.title}</h3>
+                        <h4 className = 'articleFeedBody'>{article.body.slice(0,60)}...</h4>
+                        <h5 className = 'articleFeedLikes'>Likes: {article.votes}</h5>
                         
                     </StyledLink>
                 </li>

@@ -32,6 +32,7 @@ class IndividualArticle extends React.Component {
         return (
             <ul className = 'ArticleContainer'>
                 <li key = {this.state.article.article_id}>
+
                     <h1 className = 'indvArtilceName'>{this.state.article.title}</h1>
                 </li>
             </ul>
