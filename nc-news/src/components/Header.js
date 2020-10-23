@@ -1,6 +1,8 @@
 import React from "react";
 import logoPlaceholder from '../img/emptyIMG.png'
 import largeHeaderLogo from '../img/headerLogopng.png'
+import smallHeaderLogo from '../img/mobileHeaderLogo.png'
+
 import { Link } from "@reach/router";
 import '../css/header.css'
 
@@ -12,7 +14,7 @@ const Header = (props) => {
 
       <nav>
         <Link to={`/`}>
-        <img className='headerlogo' src={largeHeaderLogo} alt='' />
+        <img className='headerlogo' src={largeHeaderLogo}  alt={smallHeaderLogo} />
         </Link>
         <ul className = 'navlist'>
           <li>
