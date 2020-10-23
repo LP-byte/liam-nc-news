@@ -1,61 +1,78 @@
-@media(max-width: 4000px) and (min-width: 1470px) {
+@media(max-width: 2000px) and (min-width: 1470px) {
 
+    /*=====Div Containing cards in Home Page====*/
+    .articleFeedCards {
+        position: absolute;
+        left: 20%;
+        display: grid;
+        grid-template-columns: repeat(1, 9fr);
+        grid-gap: 25px;
+        background-color: transparent;
+        padding-top: 10%;
+        }
+        
+        /*=====individual cards in div====*/
 
-.articleFeedCards {
-
-    display: grid;
-    grid-template-columns: repeat(1, 9fr);
-    grid-gap: 25px;
-    background-color: #b6b6b6;
-    padding-top: 10px;
-    padding-right: 40px;
-    padding-left: 40px;
-    
-  }
+        .articleFeedCards > li{
+        list-style: none;
+        background-color: white;
+        min-width: 500px;
+        max-width: 700px;
+        border-radius: 75px;
+        border-style: solid;
+        border-color: lightgrey;
+        border-width: 1px;
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif}
+        .articleFeedCards > li:hover{
+        border-style: solid;
+        border-color: rgb(133, 133, 133);
+        border-width: 1px;
+    }
   
-  .articleFeedCards > li{
-    background-color: white;
-    min-width: 500px;
-    max-width: 700px;
-    border-radius: 75px;
-    text-align: center;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
   
-  .articleFeedHead{   
-      background-color: transparent;
-  }
+  
+        /*=====values in cards*/
+        .articleFeedHead{
+            display: grid;
+            grid-template-columns: 2, 1fr;
+            background-color: transparent}
+            
+        .articleFeedAuthor {
+        background-color: transparent;
+        font-size: 16px;
+        color: black}
+        .articleFeedAuthor:hover {
+        background-color: transparent;
+        font-size: 16px;
+        color: black;
+        text-decoration: underline}
 
-  .articleFeedAuthor {
-      background-color: transparent;
-      font-size: 16px;
-      color: black
-  }
-
-  .articleFeedDateStamp {
-      background-color: transparent;
-      font-size: 16px;
-      font-weight: 90;
-      color: rgb(136, 136, 136)
-  }
-  .articleFeedName {
-      background-color: transparent;
-      font-size: 22px;
-      color: black;
-  }
-
-
-.articleFeedBody {
-    background-color: transparent;
-    font-size: 18px;
-    font-weight: 400;
-    color: rgb(122, 40, 40);
-}
+        .articleFeedDateStamp {
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 90;
+        color: rgb(136, 136, 136)}
+        
 
 
-.articleFeedLikes {
-    background-color: transparent;    
-}
+
+
+        .articleFeedName {
+        background-color: transparent;
+        font-size: 22px;
+        color: black}
+  
+        .articleFeedBody {
+        background-color: transparent;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgb(122, 40, 40)}
+
+
+        .articleFeedLikes {
+        font-size: 15px;
+        background-color: transparent}
 
 
 }
@@ -65,55 +82,75 @@
 
 @media(max-width: 1470px) and (min-width: 500px) {
 
-
     .articleFeedCards {
-
+        position: absolute;
+        left: 10%;
         display: grid;
         grid-template-columns: repeat(1, 9fr);
         grid-gap: 25px;
-        background-color: #b6b6b6;
+        background-color: transparent;
         padding-top: 10px;
-        padding-right: 40px;
-        padding-left: 40px;
-        
-      }
-      
-      .articleFeedCards > li{
+        }
+        .articleFeedCards > li{
+        list-style-type: none;
         background-color: white;
         min-width: 500px;
         max-width: 700px;
         border-radius: 75px;
+        border-style: solid;
+        border-color: lightgrey;
+        border-width: 1px;
         text-align: center;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-      
-      .articleFeedHead{   
-          background-color: transparent; 
-      }
-    
-      .articleFeedAuthor {
-          background-color: transparent;
-      }
-    
-      .articleFeedDateStamp {
-          background-color: transparent;
-      }
-      .articleFeedName {
-          background-color: transparent;
-      }
-    
-    
-    .articleFeedBody {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif}
+        .articleFeedCards > li:hover{
+        border-style: solid;
+        border-color: rgb(133, 133, 133);
+        border-width: 1px;
+    }
+  
+  
+  
+  
+        .articleFeedHead{   
+        background-color: transparent}
+        
+        .articleFeedAuthor {
         background-color: transparent;
-    }
-    
-    
-    .articleFeedLikes {
-        background-color: transparent;    
-    }
+        font-size: 16px;
+        color: black}
+        .articleFeedAuthor:hover {
+        background-color: transparent;
+        font-size: 16px;
+        color: black;
+        text-decoration: underline}
+
+        .articleFeedDateStamp {
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 90;
+        color: rgb(136, 136, 136)}
+        
+        .articleFeedName {
+        background-color: transparent;
+        font-size: 22px;
+        color: black}
 
 
-}
+        
+        
+        .articleFeedBody {
+        background-color: transparent;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgb(122, 40, 40)}
+
+
+        .articleFeedLikes {
+        font-size: 15px;
+        background-color: transparent}
+    
+    
+    }
 
 
 
@@ -122,44 +159,73 @@
 @media(max-width: 500px){
 
     .articleFeedCards {
-
+        
         display: grid;
         grid-template-columns: repeat(1, 9fr);
         grid-gap: 25px;
-        background-color: #b6b6b6;
-        padding-top: 10px;
-        padding-right: 40px;
-        padding-left: 40px;
-        
-      }
-      
-      .articleFeedCards > li{
+        background-color:transparent;
+        padding-top: 10px;}
+
+
+        .articleFeedCards > li{
+
+        list-style: none;
         background-color: white;
         min-width: 500px;
         max-width: 700px;
         border-radius: 75px;
+        border-style: solid;
+        border-color: lightgrey;
+        border-width: 1px;
         text-align: center;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-      
-      .articleFeedHead{   
-          background-color: transparent; 
-          
-      }
-      .articleFeedAuthor {
-          background-color: transparent;
-      }
-      .articleFeedDateStamp {
-          background-color: transparent;
-      }
-      .articleFeedName {
-          background-color: transparent;
-      }
-      .articleFeedBody {
-          background-color: transparent;
-      }
-      .articleFeedLikes {
-          background-color: transparent;    
-      }
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif}
+        .articleFeedCards > li:hover{
+        border-style: solid;
+        border-color: rgb(133, 133, 133);
+        border-width: 1px;
+    }
+  
+  
+  
+  
+        .articleFeedHead{   
+        background-color: transparent}
+        
+        .articleFeedAuthor {
+        background-color: transparent;
+        font-size: 16px;
+        color: black}
+        .articleFeedAuthor:hover {
+        background-color: transparent;
+        font-size: 16px;
+        color: black;
+        text-decoration: underline}
+
+        .articleFeedDateStamp {
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 90;
+        color: rgb(136, 136, 136)}
+        
+        .articleFeedName {
+        background-color: transparent;
+        font-size: 22px;
+        color: black}
+
+
+        
+        
+        .articleFeedBody {
+        background-color: transparent;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgb(122, 40, 40)}
+
+
+        .articleFeedLikes {
+        font-size: 15px;
+        background-color: transparent}
+
 
 }
+
