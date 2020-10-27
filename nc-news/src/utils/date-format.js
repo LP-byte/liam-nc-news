@@ -1,6 +1,5 @@
 function dateFormater (articles) {
 
-console.log(articles)
     const alteredArticles  = articles.map((article) => {
 
         let monthToStr = '';
@@ -48,7 +47,6 @@ console.log(articles)
       return {...article, created_at: articlePostTime}
     
     })
-    console.log(alteredArticles)
     return alteredArticles
 
 }
