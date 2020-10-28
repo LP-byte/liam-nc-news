@@ -1,6 +1,6 @@
 function singleDateFormat (article) {
 
-    for (let property in  article){
+    for (let property in article){
 
 
         let monthToStr = '';

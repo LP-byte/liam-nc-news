@@ -6,7 +6,6 @@ import dateFormat from '../utils/date-format'
 
 
 const StyledLink = styled(Link)`
-  color: red;
   text-decoration: none;
   &:focus,
   &:hover,
@@ -16,15 +15,15 @@ const StyledLink = styled(Link)`
     text-decoration: none;
   }
 `;
+
+
+
 class ArticleFeedList extends React.Component{
     state =             {
         articles: [],
         isLoading: true
       
 }
-
-
-
 
 componentDidMount() {
   axios
@@ -42,24 +41,31 @@ componentDidMount() {
     
 }
 
-
 render () {
-    console.log(this.state.articles)
     if(this.state.isLoading) 
     return <b>article data loading...</b>
     
-    
     return (
-      
-      
+
+      <div className = 'homeContainer'>
+        <StyledLink to={'/topics'}>
+          <button className = 'homeTopicsButton'>
+            Topics
+          </button>
+        </StyledLink>
+
+        <div className = 'SortByContainer'>
+          <button className = 'sbDateButton'>Date</button>
+          <button className = 'sbCommentsButton'>comments</button>
+          <button className = 'sbVotesButton'>Votes</button>
+        </div>
+
       <ul className = 'articleFeedCards'>
         {this.state.articles.map((article)=> {
 
+        return (
 
-
-           
-            return (
-                <li key ={article.article_id}>
+        <li key ={article.article_id}>
                     <StyledLink to={`/${article.article_id}`}>
                         <div className = 'articleFeedHead'>
                         <h1 className = 'articleFeedAuthor'>Author: {article.author}</h1>
@@ -74,10 +80,9 @@ render () {
             )
         })}
         </ul>
-        
+        </div>
     )
 }
 
 }
-
 export default ArticleFeedList;
