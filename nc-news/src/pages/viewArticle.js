@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import '../css/articleFeed.css'
-import singleDateFormat from '../utils/single-article-date-format'
+import singleDateFormat from '../utils/format-date/single-article-date-format'
 import { Link } from "@reach/router";
 import styled from "styled-components";
 

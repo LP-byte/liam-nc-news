@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "@reach/router";
 import styled from "styled-components";
 import axios from 'axios';
-import dateFormat from '../utils/date-format'
-
-
+import dateFormat from '../utils/format-date/date-format'
+import sortArticlesByCommentCount from '../utils/sortArticles/sort-by-comments'
+import sortArticleByVoteCount from '../utils/sortArticles/sort-by-votes'
 const StyledLink = styled(Link)`
   text-decoration: none;
   &:focus,
@@ -16,13 +16,10 @@ const StyledLink = styled(Link)`
   }
 `;
 
-
-
 class ArticleFeedList extends React.Component{
     state =             {
         articles: [],
-        isLoading: true
-      
+        isLoading: true     
 }
 
 componentDidMount() {
@@ -30,7 +27,7 @@ componentDidMount() {
     .get("https://nc-news-server-liam.herokuapp.com/api/articles")
 
     .then((res) => {
-
+      
       const newArticles = dateFormat(res.data.articles)
       this.setState({
         articles: newArticles,
@@ -39,7 +36,39 @@ componentDidMount() {
       
     });
     
-}
+  }
+  handlesortByDate = event => {
+   axios
+    .get("https://nc-news-server-liam.herokuapp.com/api/articles")
+
+    .then((res) => {
+      
+      const newArticles = dateFormat(res.data.articles)
+      this.setState({
+        articles: newArticles,
+        isLoading: false,
+      });
+      
+    });
+  }
+  handlesortByCommentCount = event => {
+   const sortedByComCount = sortArticlesByCommentCount(this.state.articles)
+   this.setState({
+     articles: sortedByComCount,
+     isLoading: false
+   })
+  }
+
+  handleSortByVoteCount = event => {
+    const sortedByVoteCount = sortArticleByVoteCount(this.state.articles)
+    this.setState({
+      articles: sortedByVoteCount,
+      isLoading: false
+    }) 
+  }
+ 
+
+ 
 
 render () {
     if(this.state.isLoading) 
@@ -54,13 +83,19 @@ render () {
           </button>
         </StyledLink>
 
-        <div className = 'SortByContainer'>
-          <button className = 'sbDateButton'>Date</button>
-          <button className = 'sbCommentsButton'>comments</button>
-          <button className = 'sbVotesButton'>Votes</button>
-        </div>
+        <ul className = 'SortByContainer'>
+          
+
+        </ul>
 
       <ul className = 'articleFeedCards'>
+      
+      <button className = 'sbVotesButton'onClick={() => this.handleSortByVoteCount()}>Votes</button>
+
+          <button className = 'sbDateButton'onClick={() => this.handlesortByDate()}>Date</button>
+          <button className = 'sbCommentsButton' onClick={() => this.handlesortByCommentCount()}>comments</button>
+      
+
         {this.state.articles.map((article)=> {
 
         return (
@@ -73,7 +108,8 @@ render () {
                         </div>
                         <h3 className = 'articleFeedName'>{article.title}</h3>
                         <h4 className = 'articleFeedBody'>{article.body.slice(0,60)}...</h4>
-                        <h5 className = 'articleFeedLikes'>Likes: {article.votes}</h5>
+                        <h5 className = 'articleFeedLikes'>Votes: {article.votes}</h5>
+                        <h6 className = 'articleFeedCommentCount'>total comments: {article.comment_count}</h6>
                         
                     </StyledLink>
                 </li>

@@ -1,5 +1,5 @@
 import dateFormater from './date-format';
-import {articles} from './date-format-test-articles.json'
+import {articles} from '../date-format-test-articles.json'
 
 describe ('date formater', () => {
     test ('returns an array containing imported json objects', () => {

@@ -10,7 +10,6 @@ class ArticlesByTopic extends React.Component {
     };
 
     componentDidMount() {
-      console.log(this.props)
         axios.get(`https://nc-news-server-liam.herokuapp.com/api/articles?topic=${this.props.slug}`)
              .then((res) => {
               this.setState({
